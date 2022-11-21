@@ -46,6 +46,24 @@
           debugger;
 
           // write me! (... without using cloneNode, that's kind of cheating)
+          const h1Element=document.createElement('h1');
+          h1Element.innerText="a list of things";    //created header
+          const actual=document.getElementById('actual');
+          const olEl=document.getElementById('actual').children[0];
+          actual.insertBefore(h1Element,olEl); // inserted header before the list 
+          const olEL1=document.getElementById('actual').children[1];
+          const ulEl=document.createElement('ul'); //created ul to replace ol
+          const numchildren=olEL1.children.length;  // got the number of children of ol
+          for (let i=0;i<numchildren;i++ )
+          {
+            const nextChild=olEL1.children[i].cloneNode(true); // clone the li of ol
+            ulEl.appendChild(nextChild);  //added the list items  to ul
+          }
+          
+          actual.replaceChild(ulEl,olEL1);  // replaced ol with ul
+          ulEl.children[1].innerText='solar systems'; // assigning second item of list to solar system
+          ulEl.removeChild(ulEl.children[2]);    //removing an extra child of ul 
+          
         </script>
       </div>
 

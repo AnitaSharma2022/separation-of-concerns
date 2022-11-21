@@ -44,6 +44,37 @@
           debugger;
 
           // write me! (... without using cloneNode, that's kind of cheating)
+          const actual=document.getElementById('actual');
+          const h2El=document.createElement('h2');
+          h2El.innerText="a list of things";
+          
+          const ulEl=document.createElement('ul');
+
+          const li_1=document.createElement('li');
+          li_1.innerText="robots";
+
+          const li_2=document.createElement('li');
+          li_2.innerText="solar systems";
+
+          const aEl=document.createElement('a');
+          aEl.innerText="learn about badgers";
+          aEl.href="https://www.badgerbadgerbadger.com";
+          aEl.expected="_blank";
+          const li_3=document.createElement('li');
+          li_3.appendChild(aEl);
+
+          const li_4=document.createElement('li');
+          li_4.innerText="oil";
+          
+          
+
+          ulEl.appendChild(li_1);
+          ulEl.appendChild(li_2);
+          ulEl.appendChild(li_3);
+          ulEl.appendChild(li_4);
+          
+          actual.appendChild(h2El);
+          actual.appendChild(ulEl);
         </script>
       </div>
 

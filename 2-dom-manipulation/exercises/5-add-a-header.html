@@ -45,6 +45,34 @@
           debugger;
 
           // write me! (... without using cloneNode, that's kind of cheating)
+          const h1Element=document.createElement('h1');
+          h1Element.innerText='a list of things';
+          const actual = document.getElementById('actual');
+          const ulEl=document.getElementById('actual').children[0];
+          /* const ulElement = document.createElement('ul');
+
+          const firstElement = document.createElement('li')
+          firstElement.innerText = 'robots';
+          const secondElement = document.createElement('li')
+          secondElement.innerText = 'solar systems';
+          const thirdElement = document.createElement('li')
+          thirdElement.innerText = 'oil';
+
+          ulElement.appendChild(firstElement);
+          ulElement.appendChild(secondElement);
+          ulElement.appendChild(thirdElement);
+
+          const actual = document.getElementById('actual');
+          const ulListElement = actual.children[0];
+
+          actual.removeChild(ulListElement);
+
+          actual.appendChild(h1Element);
+          actual.appendChild(ulElement); */
+        actual.insertBefore(h1Element,ulEl);
+        
+        ulEl.children[1].innerText='solar systems';
+          
         </script>
       </div>
 
