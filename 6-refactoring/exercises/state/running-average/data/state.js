@@ -1,1 +1,5 @@
-export const state = _;
+export const data = {
+    average: 0,
+    numbers: [],
+  };
+  
