@@ -1,3 +1,6 @@
+/**
+ *  @jest-environment jsdom
+ */
 import { info } from './info.js';
 
 describe('info: renders some info under a caption', () => {

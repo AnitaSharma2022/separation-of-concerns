@@ -6,7 +6,7 @@ const testCases = [
       topic: 'the dom',
       links: {
         'js.info': 'https://javascript.info/document',
-        MDN: 'https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction',
+        'MDN': 'https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction',
         'HYF Ams':
           'https://github.com/HackYourFuture/JavaScript2/blob/master/Week1/README.md',
         'HYF Be': 'https://hackyourfuture.be/inspecting-the-dom',
